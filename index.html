@@ -4,27 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Piedra&display=swap" rel="stylesheet">
 
   <title>Exchange Rate Calculator</title>
 </head>
 <body>
-  <h1>Exchange Rate Calculator</h1>
+  <div class="container">
+    <h1>Exchange Rate Calculator</h1>
+    <div class="currency">
+      <select name="first-currency" id="first-currency"></select>
+      <input type="number" id="first-amount">
+    </div>
 
-  <p>First Currency</p>
-  <select name="first-currency" id="first-currency">
-    <!-- <option value="USD">USD</option>
-    <option value="EUR">EUR</option>
-    <option value="CHF">CHF</option> -->
-  </select>
-  <input type="number" id="first-amount">
+    <p id="exchange-rate">1 <span id="first"></span> = <span id="amount"></span> <span id="second"></span></p>
 
-  <p>Second Currency</p>
-  <select name="second-currency" id="second-currency">
-    <!-- <option value="EUR">EUR</option>
-    <option value="CHF">CHF</option>
-    <option value="USD">USD</option> -->
-  </select>
-  <input type="number" id="second-amount">
+    <div class="currency">
+      <select name="second-currency" id="second-currency"></select>
+      <input type="number" id="second-amount">
+    </div>
+  </div>
 
   <!-- Javascripts -->
   <script src="app.js"></script>

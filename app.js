@@ -1,5 +1,10 @@
 console.log("Hello from the console!");
 
+// Exchange rate
+const first = document.getElementById('first');
+const amount = document.getElementById('amount');
+const second = document.getElementById('second');
+
 // Initializing
 const firstCurrency = document.getElementById('first-currency');
 const secondCurrency = document.getElementById('second-currency');
@@ -17,6 +22,9 @@ fetch('https://open.exchangerate-api.com/v6/latest')
   secondCurrency.value = 'EUR';
   firstAmount.value = data.rates[currenciesList.shift()].toFixed(2);
   secondAmount.value = data.rates[secondCurrency.value].toFixed(2);
+  first.innerText = firstCurrency.value;
+  amount.innerText = secondAmount.value;
+  second.innerText = secondCurrency.value;
 })
 
 // Compute function
@@ -27,6 +35,9 @@ const compute = () => {
       const exchangeRate = data.rates[secondCurrency.value]
       console.log(exchangeRate);
       secondAmount.value = (firstAmount.value * exchangeRate).toFixed(2);
+      first.innerText = firstCurrency.value;
+      amount.innerText = secondAmount.value;
+      second.innerText = secondCurrency.value;
       console.log(`${firstAmount.value} ${firstCurrency.value} = ${secondAmount.value} ${secondCurrency.value}`);
     })
 }

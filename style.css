@@ -1,3 +1,57 @@
 body {
-  background-color: aquamarine;
+  background-color: #d4eefd;
+  font-family: 'Nunito', sans-serif;
+  color: #004065;
+}
+
+h1 {
+  font-family: 'Piedra', cursive;
+  margin-bottom: 60px;
+  font-size: 2.5rem;
+}
+
+.container {
+  width: 50%;
+  margin: 100px auto;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px 20px 60px 20px;
+  text-align: center;
+}
+
+.currency {
+  display: flex;
+  width: 35%;
+  margin: 0 auto;
+}
+
+input,
+select {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+}
+
+input {
+  border: 1px solid #037fc7;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #e2f4ff;
+  padding: 10px 10px 10px 0;
+  text-align: right;
+  margin-left: 0;
+  color: #037fc7;
+}
+
+select {
+  border: 1px solid #037fc7;
+  border-radius: 5px 0 0 5px;
+  color: #037fc7;
+  padding: 8px 0 8px 8px;
+  margin-right: 0;
+}
+
+#exchange-rate {
+  color: #50626d;
+  font-size: 0.9rem;
+  margin: 30px 0;
 }
